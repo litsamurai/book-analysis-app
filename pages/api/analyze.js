@@ -1,4 +1,4 @@
-https://book-analysis-app-jet.vercel.appexport default async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
   const { title, author, focus } = req.body;
   if (!title) return res.status(400).json({ error: 'title required' });
